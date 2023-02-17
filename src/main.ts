@@ -6,7 +6,13 @@ import { AppModule } from './app.module';
 import { HttpExceptionFilter } from './http-exception.filter';
 
 function checkEnvironment(configService: ConfigService) {
-  const requiredEnvVars = ['PORT', 'CLIENT_ORIGIN_URL'];
+  const requiredEnvVars = [
+    'PORT',
+    'CLIENT_ORIGIN_URL',
+    'ISSUER_BASE_URL',
+    'AUDIENCE',
+  ];
+
   requiredEnvVars.forEach((envVar) => {
     if (!configService.get<string>(envVar)) {
       throw Error(`Undefined environment variable: ${envVar}`);
