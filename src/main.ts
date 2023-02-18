@@ -8,9 +8,9 @@ import { HttpExceptionFilter } from './http-exception.filter';
 function checkEnvironment(configService: ConfigService) {
   const requiredEnvVars = [
     'PORT',
-    'CLIENT_ORIGIN_URL',
     'ISSUER_BASE_URL',
     'AUDIENCE',
+    'CLIENT_ORIGIN_URL',
   ];
 
   requiredEnvVars.forEach((envVar) => {
