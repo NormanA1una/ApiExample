@@ -11,7 +11,7 @@ export class MessagesService {
 
   getProtectedMessage = (): Message => {
     return {
-      text: 'This is a protected message.',
+      text: 'This is a protected message! Yei!.',
     };
   };
 
